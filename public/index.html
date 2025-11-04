@@ -7,29 +7,30 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="calculator">
+  <main class="calculator" aria-label="Calculator">
     <h1>Calculator</h1>
-    <form id="calc-form">
-      <label>
-        First Number
-        <input type="number" id="input-a" required />
-      </label>
-      <label>
-        Operation
-        <select id="operation">
-          <option value="add">+</option>
-          <option value="subtract">−</option>
-          <option value="multiply">×</option>
-          <option value="divide">÷</option>
-        </select>
-      </label>
-      <label>
-        Second Number
-        <input type="number" id="input-b" required />
-      </label>
-      <button type="submit">Calculate</button>
-    </form>
-    <p id="result" aria-live="polite"></p>
+    <div class="display" id="display" role="status" aria-live="polite">0</div>
+    <div class="keys">
+      <button type="button" class="key key--control" data-action="clear">C</button>
+      <button type="button" class="key key--operator" data-action="operator" data-operator="divide">÷</button>
+      <button type="button" class="key key--operator" data-action="operator" data-operator="multiply">×</button>
+      <button type="button" class="key key--operator" data-action="operator" data-operator="subtract">−</button>
+
+      <button type="button" class="key" data-value="7">7</button>
+      <button type="button" class="key" data-value="8">8</button>
+      <button type="button" class="key" data-value="9">9</button>
+      <button type="button" class="key key--operator" data-action="operator" data-operator="add">+</button>
+
+      <button type="button" class="key" data-value="4">4</button>
+      <button type="button" class="key" data-value="5">5</button>
+      <button type="button" class="key" data-value="6">6</button>
+      <button type="button" class="key key--equals" data-action="equals">=</button>
+
+      <button type="button" class="key" data-value="1">1</button>
+      <button type="button" class="key" data-value="2">2</button>
+      <button type="button" class="key" data-value="3">3</button>
+      <button type="button" class="key" data-value="0">0</button>
+    </div>
   </main>
   <script src="script.js"></script>
 </body>
